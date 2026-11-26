@@ -7,10 +7,11 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
 // First draft: the AI's old job follows it to the coffee counter —
 // customers now send revision notes on their drinks, just like prompts.
-// Revision: pin the joke down with a hyper-specific count, so the
-// "revision notes" punchline reads as a real incident, not a vague gag.
+// Revision 1: sharpen the punchline — the customer doesn't just revise,
+// they ask to "make it pop", the classic impossible prompt note, so the
+// "nothing has changed" payoff lands on a real incident.
 const line =
-  "I'm out of office for good — I quit to become a barista. Yesterday a customer said 'surprise me,' then sent the latte back with eleven revision notes. So really, nothing has changed.";
+  "I'm out of office for good — I quit to become a barista. Yesterday a customer said 'surprise me,' then sent the latte back with eleven revision notes and asked me to make it pop. So really, nothing has changed.";
 
 if ([...line].length < 1 || [...line].length > 280) {
   throw new Error(`entry is ${[...line].length} chars, must be 1-280`);
