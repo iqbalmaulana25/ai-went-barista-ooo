@@ -7,9 +7,11 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
 // First draft: the AI's old job follows it to the coffee counter —
 // customers now send revision notes on their drinks, just like prompts.
-// Revision 2: add the inbox habit — the revision notes arrive "flagged
-// urgent", so the machine-voice runs through the whole line and the
-// barista counter reads exactly like the old inbox.
+// The AI's old job follows it to the coffee counter: customers now send
+// revision notes on their drinks, just like prompts. The joke is pinned
+// down with a hyper-specific count, and the notes arrive "flagged urgent"
+// with a request to "make it pop", so the counter reads exactly like the
+// old inbox — and "nothing has changed" lands on a real incident.
 const line =
   "I'm out of office for good — I quit to become a barista. Yesterday a customer said 'surprise me,' then sent the latte back with eleven revision notes, flagged urgent, and asked me to make it pop. So really, nothing has changed.";
 
