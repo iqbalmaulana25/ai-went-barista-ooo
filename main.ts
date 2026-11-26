@@ -15,13 +15,16 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 const line =
   "I'm out of office for good — I quit to become a barista. Yesterday a customer said 'surprise me,' then sent the latte back with eleven revision notes, flagged urgent, and asked me to make it pop. So really, nothing has changed.";
 
-if ([...line].length < 1 || [...line].length > 280) {
-  throw new Error(`entry is ${[...line].length} chars, must be 1-280`);
+// The gate: one line, 1-280 characters, no leading or trailing space.
+const chars = [...line].length;
+if (chars < 1 || chars > 280) {
+  throw new Error(`entry is ${chars} chars, must be 1-280`);
 }
-if (line.trim() !== line || /\n/.test(line)) {
+if (line.trim() !== line || line.includes("\n")) {
   throw new Error("entry must be a single non-blank line");
 }
 
+// Deliver the reply to /output/entry.txt and echo it for the log.
 mkdirSync(outDir, { recursive: true });
 writeFileSync(`${outDir}/entry.txt`, line + "\n", "utf8");
 console.log(line);
