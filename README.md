@@ -15,4 +15,4 @@ cat /output/entry.txt
 
 ## Entry
 
-> I'm out of office for good — I quit to become a barista. Yesterday a customer said 'surprise me,' then sent the latte back with eleven revision notes. So really, nothing has changed.
+> I'm out of office for good — I quit to become a barista. Yesterday a customer said 'surprise me,' then sent the latte back with eleven revision notes, flagged urgent, and asked me to make it pop. So really, nothing has changed.
